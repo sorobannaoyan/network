@@ -1,0 +1,11 @@
+version: '3.3'
+services:
+  ubuntu:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        - PASSWD=asd123
+    ports:
+      - "2222:22"
+    tty: true
